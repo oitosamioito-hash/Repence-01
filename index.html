@@ -347,6 +347,45 @@
             font-size: 20px;
         }
 
+        /* ========== FATOS IMPACTANTES ========== */
+        .fatos-impacto {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .fato-item {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 20px 25px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #1a3a34;
+            transition: all 0.3s ease;
+        }
+
+        .fato-item:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateX(5px);
+        }
+
+        .fato-item .fato-numero {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0d1f1c;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .fato-destaque {
+            font-weight: 600;
+            color: #0d1f1c;
+        }
+
         /* ========== SOLUÇÃO ========== */
         .solucao {
             text-align: center;
@@ -696,6 +735,171 @@
             .footer-info {
                 gap: 40px;
             }
+            
+            .fato-item {
+                font-size: 16px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 16px 5%;
+            }
+
+            .menu {
+                gap: 20px;
+            }
+
+            .menu a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+                padding: 8px 18px;
+                letter-spacing: 2px;
+            }
+
+            .frase {
+                font-size: 19px;
+                padding: 20px;
+            }
+
+            .simbolo-reciclagem {
+                font-size: 100px;
+            }
+
+            .perguntas ul,
+            .solucao p,
+            .local-texto,
+            .footer-card {
+                font-size: 19px;
+            }
+
+            .solucao h2,
+            .tipos h2,
+            footer h2 {
+                font-size: 30px;
+            }
+
+            .perguntas-img-wrapper img {
+                width: 240px;
+            }
+
+            .local-img-wrapper img {
+                max-width: 320px;
+            }
+
+            .tipo-item img {
+                width: 180px;
+            }
+
+            .tipos-box {
+                gap: 35px;
+            }
+
+            .card {
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+
+            .footer-info {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .btn-maps {
+                font-size: 18px;
+                padding: 14px 28px;
+            }
+
+            .btn-chat-footer {
+                font-size: 18px;
+                padding: 14px 28px;
+            }
+            
+            .fatos-impacto {
+                gap: 15px;
+            }
+            
+            .fato-item {
+                font-size: 15px;
+                padding: 15px 20px;
+            }
+            
+            .fato-item .fato-numero {
+                font-size: 18px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .menu {
+                gap: 12px;
+            }
+
+            .menu a {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .frase {
+                font-size: 22px;
+                padding: 25px;
+            }
+
+            .simbolo-reciclagem {
+                font-size: 130px;
+            }
+
+            .section {
+                padding: 60px 5%;
+            }
+
+            .card {
+                padding: 40px 30px;
+            }
+
+            .perguntas {
+                gap: 40px;
+            }
+
+            .perguntas ul {
+                font-size: 21px;
+            }
+
+            .local-content {
+                gap: 40px;
+            }
+
+            .local-img-wrapper img {
+                width: 100%;
+                max-width: 380px;
+            }
+
+            .tipos-box {
+                gap: 50px;
+            }
+
+            .footer-info {
+                gap: 40px;
+            }
         }
 
         @media(max-width: 768px) {
@@ -858,6 +1062,15 @@
             .btn-chat-footer i {
                 font-size: 20px;
             }
+            
+            .fato-item {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+            
+            .fato-item .fato-numero {
+                font-size: 16px;
+            }
         }
 
     </style>
@@ -908,9 +1121,28 @@
 
         <ul>
             <li>Como você descarta as suas pilhas?</li>
-            <li>Sabe porquê devemos descartá-las corretamente?</li>
-            <li>Conhece algum ponto de recolhimento?</li>
+            <li>Sabe por que devemos descartá-las corretamente?</li>
+            <li>Você conhece algum ponto de recolhimento?</li>
         </ul>
+        
+        <!-- TEXTOS ADICIONADOS APÓS AS PERGUNTAS -->
+        <div class="fatos-impacto">
+            <div class="fato-item">
+                <span class="fato-numero">1. ♻️</span>
+                Uma pilha jogada no lixo comum pode levar até <span class="fato-destaque">500 anos</span> para se decompor. Nesse tempo, ela libera metais tóxicos que contaminam o solo, a água e colocam vidas em risco.<br>
+                <span class="fato-destaque">Mas você pode mudar essa história.</span>
+            </div>
+            
+            <div class="fato-item">
+                <span class="fato-numero">2.</span>
+                O que você descarta em <span class="fato-destaque">segundos</span>, a natureza sente por <span class="fato-destaque">séculos</span>.
+            </div>
+            
+            <div class="fato-item">
+                <span class="fato-numero">3.</span>
+                Você sabia que <span class="fato-destaque">uma única pilha</span> pode contaminar <span class="fato-destaque">milhares de litros de água</span>?
+            </div>
+        </div>
     </div>
 </section>
 
@@ -973,7 +1205,7 @@
                 <br>
                 🏫 Almirante Boiteux
                 <br>
-                📍 Localização: Nereu Ramos
+                📍 Localização: Av. Nereu Ramos, 180. Centro Araquari-SC
             </div>
         </div>
 
@@ -1050,4 +1282,5 @@
 </script>
 
 </body>
-</html>
+</html>>
+</html></html>
